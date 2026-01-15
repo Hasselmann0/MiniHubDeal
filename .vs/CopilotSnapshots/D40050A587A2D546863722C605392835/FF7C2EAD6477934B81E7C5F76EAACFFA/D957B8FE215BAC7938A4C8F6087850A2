@@ -1,0 +1,13 @@
+﻿using MiniHub.App.DTOs;
+
+namespace MiniHub.App.Interfaces
+{
+    public interface IItemService
+    {
+        Task<IEnumerable<ItemDTO>> ObterTodosAsync();
+        Task<ItemDTO?> ObterPorIdAsync(int id);
+        Task<ItemDTO> AdicionarAsync(ItemDTO itemDto);
+        Task<ItemDTO?> AtualizarAsync(int id, ItemDTO itemDto);
+        Task<bool> DeletarAsync(int id);
+    }
+}

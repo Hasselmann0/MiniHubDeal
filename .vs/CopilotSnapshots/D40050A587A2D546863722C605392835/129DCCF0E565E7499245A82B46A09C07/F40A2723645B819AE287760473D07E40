@@ -1,0 +1,32 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+
+namespace MiniHub.Infra.Context;
+
+public class MiniHubDbContextFactory : IDesignTimeDbContextFactory<MiniHubDbContext>
+{
+    public MiniHubDbContext CreateDbContext(string[] args)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<MiniHubDbContext>();
+
+        // Caminho para o appsettings.json do projeto API
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../MiniHub.API"))
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile("appsettings.Development.json", optional: true)
+            .Build();
+
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+        // Se não encontrar a connection string, usa uma padrão para desenvolvimento
+        if (string.IsNullOrEmpty(connectionString))
+        {
+            connectionString = "Server=(localdb)\\mssqllocaldb;Database=MiniHubDb;Trusted_Connection=True;MultipleActiveResultSets=true";
+        }
+
+        optionsBuilder.UseSqlServer(connectionString);
+
+        return new MiniHubDbContext(optionsBuilder.Options);
+    }
+}

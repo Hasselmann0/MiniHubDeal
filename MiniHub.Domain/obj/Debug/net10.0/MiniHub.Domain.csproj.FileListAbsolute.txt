@@ -1,0 +1,15 @@
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\bin\Debug\net10.0\MiniHub.Domain.deps.json
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\bin\Debug\net10.0\MiniHub.Domain.runtimeconfig.json
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\bin\Debug\net10.0\MiniHub.Domain.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\bin\Debug\net10.0\MiniHub.Domain.pdb
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.csproj.AssemblyReference.cache
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.AssemblyInfoInputs.cache
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.AssemblyInfo.cs
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.csproj.CoreCompileInputs.cache
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.sourcelink.json
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\refint\MiniHub.Domain.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.pdb
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\MiniHub.Domain.genruntimeconfig.cache
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.Domain\obj\Debug\net10.0\ref\MiniHub.Domain.dll

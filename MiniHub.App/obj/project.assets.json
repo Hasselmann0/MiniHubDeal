@@ -1709,6 +1709,22 @@
             "rid": "win"
           }
         }
+      },
+      "MiniHub.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
+          "Swashbuckle.AspNetCore": "10.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniHub.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniHub.Domain.dll": {}
+        }
       }
     }
   },
@@ -4968,6 +4984,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "MiniHub.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MiniHub.Domain/MiniHub.Domain.csproj",
+      "msbuildProject": "../MiniHub.Domain/MiniHub.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4976,6 +4997,7 @@
       "Microsoft.EntityFrameworkCore >= 10.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.1",
+      "MiniHub.Domain >= 1.0.0",
       "Swashbuckle.AspNetCore >= 10.1.0"
     ]
   },
@@ -5010,7 +5032,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Domain\\MiniHub.Domain.csproj": {
+              "projectPath": "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Domain\\MiniHub.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5068,7 +5094,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

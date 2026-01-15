@@ -14,7 +14,5 @@ namespace MiniHub.Infra.Context
         }
 
         public DbSet<ItemModel> Items { get; set; }
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<TagModel> Tags { get; set; }
     }
 }

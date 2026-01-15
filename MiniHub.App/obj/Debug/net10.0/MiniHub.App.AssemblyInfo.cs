@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniHub.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85fe33ebf7927f86b51506249d2cadbffaea6f55")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniHub.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniHub.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

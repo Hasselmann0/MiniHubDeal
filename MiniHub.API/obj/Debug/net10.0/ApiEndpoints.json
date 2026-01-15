@@ -1,0 +1,91 @@
+[
+  {
+    "ContainingType": "MiniHub.API.Controllers.ImportMockApiController",
+    "Method": "ImportarDados",
+    "RelativePath": "api/ImportMockApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniHub.API.Controllers.ItemController",
+    "Method": "Items",
+    "RelativePath": "api/v1/Item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniHub.API.Controllers.ItemController",
+    "Method": "AdicionarItem",
+    "RelativePath": "api/v1/Item",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemDto",
+        "Type": "MiniHub.App.DTOs.ItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniHub.API.Controllers.ItemController",
+    "Method": "ItemPorId",
+    "RelativePath": "api/v1/Item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniHub.API.Controllers.ItemController",
+    "Method": "AtualizarItem",
+    "RelativePath": "api/v1/Item/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "itemDto",
+        "Type": "MiniHub.App.DTOs.ItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniHub.API.Controllers.ItemController",
+    "Method": "DeletarItem",
+    "RelativePath": "api/v1/Item/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

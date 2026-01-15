@@ -1319,6 +1319,56 @@
             "rid": "win"
           }
         }
+      },
+      "MiniHub.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
+          "MiniHub.Domain": "1.0.0",
+          "Swashbuckle.AspNetCore": "10.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniHub.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniHub.App.dll": {}
+        }
+      },
+      "MiniHub.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
+          "Swashbuckle.AspNetCore": "10.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniHub.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniHub.Domain.dll": {}
+        }
+      },
+      "MiniHub.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
+          "MiniHub.App": "1.0.0",
+          "Swashbuckle.AspNetCore": "10.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniHub.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniHub.Infra.dll": {}
+        }
       }
     }
   },
@@ -3978,6 +4028,21 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "MiniHub.App/1.0.0": {
+      "type": "project",
+      "path": "../MiniHub.App/MiniHub.App.csproj",
+      "msbuildProject": "../MiniHub.App/MiniHub.App.csproj"
+    },
+    "MiniHub.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MiniHub.Domain/MiniHub.Domain.csproj",
+      "msbuildProject": "../MiniHub.Domain/MiniHub.Domain.csproj"
+    },
+    "MiniHub.Infra/1.0.0": {
+      "type": "project",
+      "path": "../MiniHub.Infra/MiniHub.Infra.csproj",
+      "msbuildProject": "../MiniHub.Infra/MiniHub.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3987,6 +4052,7 @@
       "Microsoft.EntityFrameworkCore >= 10.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.1",
+      "MiniHub.Infra >= 1.0.0",
       "Swashbuckle.AspNetCore >= 10.1.0"
     ]
   },
@@ -4021,7 +4087,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Infra\\MiniHub.Infra.csproj": {
+              "projectPath": "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Infra\\MiniHub.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4086,7 +4156,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

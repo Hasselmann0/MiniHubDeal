@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace MiniHub.Domain.Entities
 {
     public class ItemModel
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Category { get; set; }
-        public decimal Price { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public string Categoria { get; set; }
+        public decimal Preco { get; set; }
+        public string Tag { get; set; }
+        public bool Ativo { get; set; } = true;
+        public DateTime CriadoEm { get; set; } = DateTime.Now;
 
-        public ICollection<TagModel> Tags { get; set; }
-
-    }   
+    }
 }

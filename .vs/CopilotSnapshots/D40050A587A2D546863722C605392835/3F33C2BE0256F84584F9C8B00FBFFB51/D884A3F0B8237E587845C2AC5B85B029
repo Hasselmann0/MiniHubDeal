@@ -1,0 +1,93 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using MiniHub.App.DTOs;
+using MiniHub.Domain.Entities;
+using MiniHub.Infra.Interfaces;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace MiniHub.API.Controllers
+{
+    [Route("api/v1/[controller]")]
+    [ApiController]
+    public class ItemController : ControllerBase
+    {
+        private readonly IItemRepository _itemRepository;
+
+        public ItemController(IItemRepository itemRepository)
+        {
+            _itemRepository = itemRepository;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Items()
+        {
+            var items = await _itemRepository.obterTodos();
+            return Ok(items);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ItemPorId(int id)
+        {
+            var item = await _itemRepository.obterPorId(id);
+            
+            if (item == null)
+                return NotFound(new { message = $"Item com ID {id} não encontrado." });
+            
+            return Ok(item);
+        }
+
+        [HttpPost]
+        public IActionResult AdicionarItem([FromBody] ItemDTO itemDto)
+        {
+            if (itemDto == null)
+                return BadRequest(new { message = "Dados inválidos." });
+
+            var item = new ItemModel
+            {
+                Nome = itemDto.Nome,
+                Descricao = itemDto.Descricao,
+                Categoria = itemDto.Categoria,
+                Preco = itemDto.Preco,
+                Tag = itemDto.Tag,
+                Ativo = true,
+                CriadoEm = DateTime.Now
+            };
+
+            _itemRepository.AdicionarItem(item);
+            return CreatedAtAction(nameof(ItemPorId), new { id = item.Id }, item);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> AtualizarItem(int id, [FromBody] ItemDTO itemDto)
+        {
+            if (itemDto == null)
+                return BadRequest(new { message = "Dados inválidos." });
+
+            var itemExistente = await _itemRepository.obterPorId(id);
+            
+            if (itemExistente == null)
+                return NotFound(new { message = $"Item com ID {id} não encontrado." });
+
+            itemExistente.Nome = itemDto.Nome;
+            itemExistente.Descricao = itemDto.Descricao;
+            itemExistente.Categoria = itemDto.Categoria;
+            itemExistente.Preco = itemDto.Preco;
+            itemExistente.Tag = itemDto.Tag;
+
+            _itemRepository.AtualizarItem(itemExistente);
+            return Ok(itemExistente);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletarItem(int id)
+        {
+            var item = await _itemRepository.obterPorId(id);
+            
+            if (item == null)
+                return NotFound(new { message = $"Item com ID {id} não encontrado." });
+
+            _itemRepository.DeletarItem(item);
+            return NoContent();
+        }
+    }
+}

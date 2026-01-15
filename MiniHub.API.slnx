@@ -1,6 +1,10 @@
 <Solution>
   <Folder Name="/0 - API/">
-    <Project Path="MiniHub.API/MiniHub.API.csproj" />
+    <Project Path="MiniHub.API/MiniHub.API.csproj">
+      <BuildDependency Project="MiniHub.App/MiniHub.App.csproj" />
+      <BuildDependency Project="MiniHub.Domain/MiniHub.Domain.csproj" />
+      <BuildDependency Project="MiniHub.Infra/MiniHub.Infra.csproj" />
+    </Project>
   </Folder>
   <Folder Name="/1 - Application/">
     <Project Path="MiniHub.App/MiniHub.App.csproj" />
