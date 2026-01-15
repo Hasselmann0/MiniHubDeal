@@ -55,7 +55,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MiniHub.Domain",
+              "Title": "MiniHub.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Domain\\MiniHub.Domain.csproj",
               "RelativeDocumentMoniker": "MiniHub.Domain\\MiniHub.Domain.csproj",
               "ToolTip": "C:\\Users\\isaac.bastos\\Documents\\VScode Proj\\MiniHub.API\\MiniHub.Domain\\MiniHub.Domain.csproj",
@@ -75,8 +75,7 @@
               "RelativeToolTip": "MiniHub.API\\Controllers\\ItemController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAwwD0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:31:25.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:31:25.866Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "MiniHub.App\\DTOs\\ImportDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:24:23.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:24:23.787Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "MiniHub.Infra\\Services\\ImportMockAPIService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAADcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:13:19.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:13:19.78Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "MiniHub.App\\DTOs\\ItemDTO.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:17:08.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:17:08.985Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "MiniHub.API\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:12:10.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:12:10.759Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "MiniHub.API\\Controllers\\ImportMockApiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T17:09:14.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T17:09:14.76Z"
             }
           ]
         }
