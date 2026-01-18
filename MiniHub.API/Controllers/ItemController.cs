@@ -67,5 +67,25 @@ namespace MiniHub.API.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("export/csv")]
+        [Tags("Item - Relatórios")]
+        public async Task<IActionResult> ExportarCsv()
+        {
+            var csvBytes = await _itemService.ExportarCsvAsync();
+
+            return File(csvBytes, "text/csv", "items.csv");
+        }
+
+        [HttpGet("pesquisa")]
+        [Tags("Item - Consultas Avançadas")]
+        public async Task<IActionResult> Pesquisar([FromQuery] FiltroBuscaDto filtro)
+        {
+
+            var resultado = await _itemService.ObterCatalogo(filtro);
+
+            return Ok(resultado);
+        }
+
     }
 }

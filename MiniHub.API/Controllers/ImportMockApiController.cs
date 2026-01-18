@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using MiniHub.App.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using MiniHub.Infra.Services;
 
 namespace MiniHub.API.Controllers
 {

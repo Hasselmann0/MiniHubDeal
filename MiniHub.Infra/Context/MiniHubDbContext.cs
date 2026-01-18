@@ -2,6 +2,7 @@
 using MiniHub.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace MiniHub.Infra.Context
@@ -14,5 +15,13 @@ namespace MiniHub.Infra.Context
         }
 
         public DbSet<ItemModel> Items { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

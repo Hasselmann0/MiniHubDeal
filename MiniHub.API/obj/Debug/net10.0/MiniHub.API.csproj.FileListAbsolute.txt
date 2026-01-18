@@ -176,4 +176,11 @@ C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\obj\Debug\ne
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\obj\Debug\net10.0\ref\MiniHub.API.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MiniHub.App.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MiniHub.App.pdb
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\DnsClient.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.EntityFrameworkCore.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\SharpCompress.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\Snappier.dll
+C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\ZstdSharp.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

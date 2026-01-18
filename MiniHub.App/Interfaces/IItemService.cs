@@ -1,4 +1,5 @@
 using MiniHub.App.DTOs;
+using MiniHub.Domain.Entities;
 
 namespace MiniHub.App.Interfaces
 {
@@ -9,5 +10,7 @@ namespace MiniHub.App.Interfaces
         Task<ItemDTO> AdicionarAsync(ItemDTO itemDto);
         Task<ItemDTO?> AtualizarAsync(Guid id, ItemDTO itemDto);
         Task<bool> DeletarAsync(Guid id);
+        Task<byte[]> ExportarCsvAsync();
+        Task<IEnumerable<ItemModel>> ObterCatalogo(FiltroBuscaDto filtro);
     }
 }

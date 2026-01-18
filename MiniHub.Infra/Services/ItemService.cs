@@ -2,28 +2,32 @@ using MiniHub.App.DTOs;
 using MiniHub.App.Interfaces;
 using MiniHub.Domain.Entities;
 using MiniHub.Infra.Interfaces;
+using MiniHub.Infra.Mappers;
+using System.Text;
 
-namespace MiniHub.App.Services
+namespace MiniHub.Infra.Services
 {
     public class ItemService : IItemService
     {
         private readonly IItemRepository _itemRepository;
+        private readonly ILogService _logService;
 
-        public ItemService(IItemRepository itemRepository)
+        public ItemService(IItemRepository itemRepository, ILogService  logService)
         {
             _itemRepository = itemRepository;
+            _logService = logService;
         }
 
         public async Task<IEnumerable<ItemDTO>> ObterTodosAsync()
         {
             var items = await _itemRepository.ObterTodos();
-            return items.Select(MapToDTO);
+            return items.Select(ItemDTOMapper.MapeaItemDto);
         }
 
         public async Task<ItemDTO?> ObterPorIdAsync(Guid id)
         {
             var item = await _itemRepository.ObterPorId(id);
-            return item != null ? MapToDTO(item) : null;
+            return item != null ? ItemDTOMapper.MapeaItemDto(item) : null;
         }
 
         public async Task<ItemDTO> AdicionarAsync(ItemDTO itemDto)
@@ -39,8 +43,19 @@ namespace MiniHub.App.Services
                 CriadoEm = DateTime.Now
             };
 
+            await _logService.RegistrarLogAsync(new LogDTO
+            {
+                Acao = "CriarProduto",
+                Payload = new
+                {
+                    IdGerado = item.Id,
+                    Nome = item.Nome,
+                    Data = DateTime.Now
+                }
+            });
+
             _itemRepository.AdicionarItem(item);
-            return MapToDTO(item);
+            return ItemDTOMapper.MapeaItemDto(item);
         }
 
         public async Task<ItemDTO?> AtualizarAsync(Guid id, ItemDTO itemDto)
@@ -57,13 +72,13 @@ namespace MiniHub.App.Services
             itemExistente.Tag = itemDto.Tag;
 
             _itemRepository.AtualizarItem(itemExistente);
-            return MapToDTO(itemExistente);
+            return ItemDTOMapper.MapeaItemDto(itemExistente);
         }
 
         public async Task<bool> DeletarAsync(Guid id)
         {
             var item = await _itemRepository.ObterPorId(id);
-            
+
             if (item == null)
                 return false;
 
@@ -71,17 +86,25 @@ namespace MiniHub.App.Services
             return true;
         }
 
-        // Método privado para mapeamento de ItemModel para ItemDTO
-        private static ItemDTO MapToDTO(ItemModel item)
+        public async Task<byte[]> ExportarCsvAsync()
         {
-            return new ItemDTO(
-                item.Id,
-                item.Nome,
-                item.Descricao,
-                item.Categoria,
-                item.Preco,
-                item.Tag
-            );
+            var itens = await _itemRepository.ObterTodos();
+
+            var csvBuilder = new StringBuilder();
+
+            csvBuilder.AppendLine("Nome,Descricao,Categoria,Tag,Preco");
+
+            foreach (var item in itens)
+            {
+                csvBuilder.AppendLine($"{item.Nome},{item.Descricao},{item.Categoria},{item.Tag},{item.Preco}");
+            }
+
+            return Encoding.UTF8.GetBytes(csvBuilder.ToString());
+        }
+
+        public async Task<IEnumerable<ItemModel>> ObterCatalogo(FiltroBuscaDto filtro)
+        {
+            return await _itemRepository.BuscarAvancadoAsync(filtro);
         }
     }
 }

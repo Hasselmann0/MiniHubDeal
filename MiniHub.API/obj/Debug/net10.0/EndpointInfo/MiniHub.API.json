@@ -141,6 +141,85 @@
           }
         }
       }
+    },
+    "/api/v1/Item/pesquisa": {
+      "get": {
+        "tags": [
+          "Item - Consultas Avançadas"
+        ],
+        "parameters": [
+          {
+            "name": "TermoBusca",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Categoria",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PrecoMin",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "PrecoMax",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ApenasAtivos",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ItensPorPagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Item/export/csv": {
+      "get": {
+        "tags": [
+          "Item - Relatórios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -183,6 +262,12 @@
     },
     {
       "name": "Item"
+    },
+    {
+      "name": "Item - Consultas Avançadas"
+    },
+    {
+      "name": "Item - Relatórios"
     }
   ]
 }

@@ -47,6 +47,7 @@ namespace MiniHub.Infra.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Preco")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Tag")
@@ -55,7 +56,64 @@ namespace MiniHub.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Items");
+                    b.ToTable("Items", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890"),
+                            Ativo = true,
+                            Categoria = "Informática",
+                            CriadoEm = new DateTime(2025, 10, 20, 14, 30, 0, 0, DateTimeKind.Utc),
+                            Descricao = "Processador Intel i7, 16GB RAM, SSD 512GB, Windows 11",
+                            Nome = "Notebook Dell Inspiron 15",
+                            Preco = 4599.90m,
+                            Tag = "BlackFriday"
+                        },
+                        new
+                        {
+                            Id = new Guid("b2c3d4e5-f6a7-8901-b2c3-d4e5f6a78901"),
+                            Ativo = true,
+                            Categoria = "Smartphones",
+                            CriadoEm = new DateTime(2026, 1, 10, 9, 0, 0, 0, DateTimeKind.Utc),
+                            Descricao = "Tela 6.2 AMOLED, 256GB, Câmera Tripla com IA",
+                            Nome = "Smartphone Samsung Galaxy S24",
+                            Preco = 5299.00m,
+                            Tag = "Lançamento"
+                        },
+                        new
+                        {
+                            Id = new Guid("c3d4e5f6-a7b8-9012-c3d4-e5f6a7b89012"),
+                            Ativo = true,
+                            Categoria = "Móveis",
+                            CriadoEm = new DateTime(2025, 11, 5, 11, 15, 0, 0, DateTimeKind.Utc),
+                            Descricao = "Ajuste de lombar, braços 3D e encosto em mesh respirável",
+                            Nome = "Cadeira Ergonômica Office",
+                            Preco = 850.50m,
+                            Tag = "HomeOffice"
+                        },
+                        new
+                        {
+                            Id = new Guid("d4e5f6a7-b8c9-0123-d4e5-f6a7b8c90123"),
+                            Ativo = false,
+                            Categoria = "Periféricos",
+                            CriadoEm = new DateTime(2024, 12, 1, 8, 0, 0, 0, DateTimeKind.Utc),
+                            Descricao = "29 Polegadas, Full HD IPS, HDR10, HDMI",
+                            Nome = "Monitor Ultrawide LG 29wl500",
+                            Preco = 1199.99m,
+                            Tag = "Produtividade"
+                        },
+                        new
+                        {
+                            Id = new Guid("e5f6a7b8-c9d0-1234-e5f6-a7b8c9d01234"),
+                            Ativo = true,
+                            Categoria = "Acessórios",
+                            CriadoEm = new DateTime(2026, 1, 15, 16, 45, 0, 0, DateTimeKind.Utc),
+                            Descricao = "Clique silencioso, sensor 8K DPI, recarregável via USB-C",
+                            Nome = "Mouse Sem Fio Logitech MX Master 3S",
+                            Preco = 649.90m,
+                            Tag = "Premium"
+                        });
                 });
 #pragma warning restore 612, 618
         }
