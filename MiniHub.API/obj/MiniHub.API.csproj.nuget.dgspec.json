@@ -76,9 +76,9 @@
               "target": "Package",
               "version": "[10.0.1, )"
             },
-            "MongoDB.EntityFrameworkCore": {
+            "MongoDB.Driver": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[3.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -590,9 +590,9 @@
               "target": "Package",
               "version": "[10.0.1, )"
             },
-            "MongoDB.EntityFrameworkCore": {
+            "MongoDB.Driver": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[3.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -957,9 +957,9 @@
               "target": "Package",
               "version": "[10.0.1, )"
             },
-            "MongoDB.EntityFrameworkCore": {
+            "MongoDB.Driver": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[3.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -1332,9 +1332,9 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
-            "MongoDB.EntityFrameworkCore": {
+            "MongoDB.Driver": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[3.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -9,23 +9,16 @@ namespace MiniHub.Domain.Entities
             Id = Guid.NewGuid();
             Acao = acao;
             CriadoEm = DateTime.UtcNow;
-            SetPayload(payload);
+            Payload = payload;
         }
 
         protected LogModel() { }
 
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Acao { get; set; }
-        public string PayloadJson { get; set; }
+        public object Payload { get; set; }
+
         //public Guid? UserId { get; set; }
         public DateTime CriadoEm { get; set; } = DateTime.Now;
-
-        public void SetPayload(object payload)
-        {
-            if (payload != null)
-            {
-                PayloadJson = JsonSerializer.Serialize(payload);
-            }
-        }
     }
 }

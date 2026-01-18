@@ -918,7 +918,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.0": {
+      "MongoDB.Bson/3.6.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/MongoDB.Bson.dll": {
@@ -931,11 +931,11 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.0": {
+      "MongoDB.Driver/3.6.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
-          "MongoDB.Bson": "3.5.0",
+          "MongoDB.Bson": "3.6.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "ZstdSharp.Port": "0.7.3"
@@ -949,19 +949,6 @@
           "lib/net6.0/MongoDB.Driver.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "MongoDB.EntityFrameworkCore/9.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.9",
-          "MongoDB.Driver": "3.5.0"
-        },
-        "compile": {
-          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
         }
       },
       "Mono.TextTemplating/3.0.0": {
@@ -1418,7 +1405,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
           "MiniHub.Domain": "1.0.0",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "compile": {
@@ -1435,7 +1422,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "compile": {
@@ -1453,7 +1440,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
           "MiniHub.App": "1.0.0",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "compile": {
@@ -3530,10 +3517,10 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
-    "MongoDB.Bson/3.5.0": {
-      "sha512": "JGNK6BanLDEifgkvPLqVFCPus5EDCy416pxf1dxUBRSVd3D9+NB3AvMVX190eXlk5/UXuCxpsQv7jWfNKvppBQ==",
+    "MongoDB.Bson/3.6.0": {
+      "sha512": "lP+nZHej9cGFVsZSZQhSdBpD60q7a/ZiLBJcfd+CRWs36BHYteaMx6m1qaHCBWT1wft640r9I4SexqpMc3VscA==",
       "type": "package",
-      "path": "mongodb.bson/3.5.0",
+      "path": "mongodb.bson/3.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3544,15 +3531,15 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.5.0.nupkg.sha512",
+        "mongodb.bson.3.6.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/3.5.0": {
-      "sha512": "ST90u7psyMkNNOWFgSkexsrB3kPn7Ynl2DlMFj2rJyYuc6SIxjmzu4ufy51yzM+cPVE1SvVcdb5UFobrRw6cMg==",
+    "MongoDB.Driver/3.6.0": {
+      "sha512": "MzEVPUo9FJ3A2fvXdKr0vGllbiAGvpyLa8bU6bucKSKndraSjfgGDn/J+ek/SrUK4A3yozYZBkwJZm8qe36VmQ==",
       "type": "package",
-      "path": "mongodb.driver/3.5.0",
+      "path": "mongodb.driver/3.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3563,24 +3550,8 @@
         "lib/net6.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.3.5.0.nupkg.sha512",
+        "mongodb.driver.3.6.0.nupkg.sha512",
         "mongodb.driver.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "MongoDB.EntityFrameworkCore/9.0.3": {
-      "sha512": "l1VxyLQKhelssOosdkV9jpjde6wbw2s2zPKl8ugYxSqMdMHCWl0e9zO8tXj8iP/S46t8xw1/zs/S3h9K0GIpwA==",
-      "type": "package",
-      "path": "mongodb.entityframeworkcore/9.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "BREAKING-CHANGES.md",
-        "LICENSE.md",
-        "README.md",
-        "lib/net8.0/MongoDB.EntityFrameworkCore.dll",
-        "mongodb.entityframeworkcore.9.0.3.nupkg.sha512",
-        "mongodb.entityframeworkcore.nuspec",
         "packageIcon.png"
       ]
     },
@@ -4278,7 +4249,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.1",
       "MiniHub.Infra >= 1.0.0",
-      "MongoDB.EntityFrameworkCore >= 9.0.3",
+      "MongoDB.Driver >= 3.6.0",
       "Swashbuckle.AspNetCore >= 10.1.0"
     ]
   },
@@ -4358,9 +4329,9 @@
             "target": "Package",
             "version": "[10.0.1, )"
           },
-          "MongoDB.EntityFrameworkCore": {
+          "MongoDB.Driver": {
             "target": "Package",
-            "version": "[9.0.3, )"
+            "version": "[3.6.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

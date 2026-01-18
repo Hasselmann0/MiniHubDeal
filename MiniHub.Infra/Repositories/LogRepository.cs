@@ -1,21 +1,21 @@
 ﻿using MiniHub.App.Interfaces;
 using MiniHub.Domain.Entities;
 using MiniHub.Infra.Context;
+using MongoDB.Driver;
 
 namespace MiniHub.Infra.Repositories
 {
     public class LogRepository : ILogRepository
     {
-        private readonly MiniHubMongoDbContext _context;
+        private readonly MiniHubMongoDbContext _collection;
 
-        public LogRepository(MiniHubMongoDbContext context)
+        public LogRepository(MiniHubMongoDbContext collection)
         {
-            _context = context;
+            _collection = collection;
         }
         public async Task AdicionarLogAsync(LogModel log)
         {
-            await _context.Logs.AddAsync(log);
-            await _context.SaveChangesAsync();
+            await _collection.Logs.InsertOneAsync(log);
         }
     }
 }

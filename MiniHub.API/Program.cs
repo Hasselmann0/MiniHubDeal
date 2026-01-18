@@ -5,6 +5,7 @@ using MiniHub.Infra.Context;
 using MiniHub.Infra.Interfaces;
 using MiniHub.Infra.Repositories;
 using MiniHub.Infra.Services;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,14 +18,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var mongoSettings = builder.Configuration.GetSection("MongoSettings");
-var connectionStringMongo = mongoSettings["ConnectionString"];
-var databaseName = mongoSettings["DatabaseName"];
-
-builder.Services.AddDbContext<MiniHubMongoDbContext>(options =>
-{
-    options.UseMongoDB(connectionStringMongo, databaseName);
-});
+builder.Services.AddSingleton<MiniHubMongoDbContext>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MiniHubDbContext>(options =>

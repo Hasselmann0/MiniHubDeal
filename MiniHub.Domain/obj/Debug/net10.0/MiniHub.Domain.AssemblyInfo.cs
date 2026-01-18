@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniHub.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaff0430d78d25f8bb0a9c56f4164156d937b954")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31db15af3f4e0ab3c12f025aad05b0508a78a9c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniHub.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniHub.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

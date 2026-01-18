@@ -14,7 +14,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.1",
           "MiniHub.Infra": "1.0.0",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "runtime": {
@@ -715,38 +715,26 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.0": {
+      "MongoDB.Bson/3.6.0": {
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
-            "assemblyVersion": "3.5.0.0",
-            "fileVersion": "3.5.0.0"
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
           }
         }
       },
-      "MongoDB.Driver/3.5.0": {
+      "MongoDB.Driver/3.6.0": {
         "dependencies": {
           "DnsClient": "1.6.1",
-          "MongoDB.Bson": "3.5.0",
+          "MongoDB.Bson": "3.6.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "ZstdSharp.Port": "0.7.3"
         },
         "runtime": {
           "lib/net6.0/MongoDB.Driver.dll": {
-            "assemblyVersion": "3.5.0.0",
-            "fileVersion": "3.5.0.0"
-          }
-        }
-      },
-      "MongoDB.EntityFrameworkCore/9.0.3": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.1",
-          "MongoDB.Driver": "3.5.0"
-        },
-        "runtime": {
-          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {
-            "assemblyVersion": "9.0.3.0",
-            "fileVersion": "9.0.3.0"
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
           }
         }
       },
@@ -1008,7 +996,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
           "MiniHub.Domain": "1.0.0",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "runtime": {
@@ -1023,7 +1011,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "runtime": {
@@ -1039,7 +1027,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.1",
           "MiniHub.App": "1.0.0",
-          "MongoDB.EntityFrameworkCore": "9.0.3",
+          "MongoDB.Driver": "3.6.0",
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "runtime": {
@@ -1316,26 +1304,19 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
-    "MongoDB.Bson/3.5.0": {
+    "MongoDB.Bson/3.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JGNK6BanLDEifgkvPLqVFCPus5EDCy416pxf1dxUBRSVd3D9+NB3AvMVX190eXlk5/UXuCxpsQv7jWfNKvppBQ==",
-      "path": "mongodb.bson/3.5.0",
-      "hashPath": "mongodb.bson.3.5.0.nupkg.sha512"
+      "sha512": "sha512-lP+nZHej9cGFVsZSZQhSdBpD60q7a/ZiLBJcfd+CRWs36BHYteaMx6m1qaHCBWT1wft640r9I4SexqpMc3VscA==",
+      "path": "mongodb.bson/3.6.0",
+      "hashPath": "mongodb.bson.3.6.0.nupkg.sha512"
     },
-    "MongoDB.Driver/3.5.0": {
+    "MongoDB.Driver/3.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ST90u7psyMkNNOWFgSkexsrB3kPn7Ynl2DlMFj2rJyYuc6SIxjmzu4ufy51yzM+cPVE1SvVcdb5UFobrRw6cMg==",
-      "path": "mongodb.driver/3.5.0",
-      "hashPath": "mongodb.driver.3.5.0.nupkg.sha512"
-    },
-    "MongoDB.EntityFrameworkCore/9.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-l1VxyLQKhelssOosdkV9jpjde6wbw2s2zPKl8ugYxSqMdMHCWl0e9zO8tXj8iP/S46t8xw1/zs/S3h9K0GIpwA==",
-      "path": "mongodb.entityframeworkcore/9.0.3",
-      "hashPath": "mongodb.entityframeworkcore.9.0.3.nupkg.sha512"
+      "sha512": "sha512-MzEVPUo9FJ3A2fvXdKr0vGllbiAGvpyLa8bU6bucKSKndraSjfgGDn/J+ek/SrUK4A3yozYZBkwJZm8qe36VmQ==",
+      "path": "mongodb.driver/3.6.0",
+      "hashPath": "mongodb.driver.3.6.0.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",

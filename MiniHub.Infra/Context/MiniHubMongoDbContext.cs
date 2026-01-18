@@ -1,30 +1,25 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MiniHub.Domain.Entities;
-using MongoDB.EntityFrameworkCore.Extensions;
+using MongoDB.Driver;
 
 namespace MiniHub.Infra.Context
 {
-    public class MiniHubMongoDbContext : DbContext
+    public class MiniHubMongoDbContext
     {
-        public DbSet<LogModel> Logs { get; set; }
+        private readonly IMongoDatabase _database;
 
-        public MiniHubMongoDbContext(DbContextOptions<MiniHubMongoDbContext> options)
-            : base(options)
+        public MiniHubMongoDbContext(IConfiguration configuration)
         {
+            var connectionString = configuration.GetSection("MongoSettings")["ConnectionString"];
+            var client = new MongoClient(connectionString);
+
+            var databaseName = MongoUrl.Create(connectionString).DatabaseName ?? "MiniHubLogs";
+            _database = client.GetDatabase(databaseName);
+
+            MongoDbPersistence.Configure();
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<LogModel>().ToCollection("Logs");
-
-            modelBuilder.Entity<LogModel>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.PayloadJson).HasElementName("payload");
-            });
-        }
+        public IMongoCollection<LogModel> Logs => _database.GetCollection<LogModel>("logs");
     }
 }

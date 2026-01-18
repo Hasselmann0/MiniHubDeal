@@ -179,7 +179,6 @@ C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\ne
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\DnsClient.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.Bson.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.Driver.dll
-C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\MongoDB.EntityFrameworkCore.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\SharpCompress.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\Snappier.dll
 C:\Users\isaac.bastos\Documents\VScode Proj\MiniHub.API\MiniHub.API\bin\Debug\net10.0\ZstdSharp.dll
